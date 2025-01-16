@@ -1,5 +1,6 @@
 """ The random module help us get random values of our choice """
 import random
+import string
 from colorama import Fore
 
 
@@ -22,35 +23,7 @@ and 'strong' to get a strong password: "
 
 def weak_password():
     """This function will generate an weak password for you"""
-    letters = [
-        "a",
-        "b",
-        "c",
-        "d",
-        "d",
-        "e",
-        "f",
-        "g",
-        "h",
-        "i",
-        "j",
-        "k",
-        "l",
-        "m",
-        "n",
-        "o",
-        "p",
-        "q",
-        "r",
-        "s",
-        "t",
-        "u",
-        "v",
-        "w",
-        "x",
-        "y",
-        "z",
-    ]
+    letters = list(string.ascii_letters)
     user_choice = int(input("How long you need your password to be: "))
     password = random.choices(letters, k=user_choice)
     print("Here is your password: " + Fore.RED + "".join(password))
@@ -58,36 +31,8 @@ def weak_password():
 
 def medium_password():
     """This function will generate a medium password for you"""
-    letters = [
-        "a",
-        "b",
-        "c",
-        "d",
-        "d",
-        "e",
-        "f",
-        "g",
-        "h",
-        "i",
-        "j",
-        "k",
-        "l",
-        "m",
-        "n",
-        "o",
-        "p",
-        "q",
-        "r",
-        "s",
-        "t",
-        "u",
-        "v",
-        "w",
-        "x",
-        "y",
-        "z",
-    ]
-    numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    letters = list(string.ascii_letters)
+    numbers = list(string.digits)
     letter_choice = int(input("How much letters do you want in your password: "))
     number_choice = int(input("How much numbers do you want in your password: "))
     letter_password = random.choices(letters, k=letter_choice)
@@ -99,53 +44,9 @@ def medium_password():
 
 def strong_password():
     """This function will generate a strong password for you"""
-    letters = [
-        "a",
-        "b",
-        "c",
-        "d",
-        "d",
-        "e",
-        "f",
-        "g",
-        "h",
-        "i",
-        "j",
-        "k",
-        "l",
-        "m",
-        "n",
-        "o",
-        "p",
-        "q",
-        "r",
-        "s",
-        "t",
-        "u",
-        "v",
-        "w",
-        "x",
-        "y",
-        "z",
-    ]
-    numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-    symbols = [
-        "~",
-        "@",
-        "#",
-        "$",
-        "%",
-        "^",
-        "&",
-        "*",
-        "(",
-        ")",
-        "?",
-        "/",
-        "<",
-        ">",
-        "|",
-    ]
+    letters = list(string.ascii_letters)
+    numbers = list(string.digits)
+    symbols = list(string.punctuation)
 
     letter_choice = int(input("How much letters do you want in your password: "))
     number_choice = int(input("How much numbers do you want in your password: "))
